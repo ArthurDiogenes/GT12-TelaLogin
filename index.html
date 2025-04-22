@@ -3,21 +3,21 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Login</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css"
-      rel="stylesheet"
-      type="text/css"
-    />
-    <link
-      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2/dist/tailwind.min.css"
-      rel="stylesheet"
-      type="text/css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/@phosphor-icons/web@2.0.3/src/regular/style.css"
-    />
+    <meta name="description" content="Página de Login" />
+    <meta name="author" content="Arthur Diógenes" />
+    <meta name="keywords" content="login, autenticação, formulário" />
+    <title>Tela de Login</title>
+    
+    <!-- Dependências externas -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2/dist/tailwind.min.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.0.3/src/regular/style.css" />
+    
+    <!-- Estilos personalizados -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/themes.css">
+    <link rel="stylesheet" href="css/utilities.css">
   </head>
   <body class="min-h-screen flex items-center justify-center bg-base-200">
     <div class="theme-controller absolute top-4 right-4">
@@ -45,9 +45,9 @@
               pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
             />
             <label class="label">
-              <span class="label-text-alt text-error hidden peer-invalid:block"
-                >Por favor, insira um email válido</span
-              >
+              <span class="label-text-alt text-error hidden peer-invalid:block">
+                Por favor, insira um email válido
+              </span>
             </label>
           </div>
 
@@ -55,7 +55,7 @@
             <label class="label">
               <span class="label-text">Senha</span>
             </label>
-            <div class="relative">
+            <div class="password-field">
               <input
                 type="password"
                 placeholder="••••••••"
@@ -63,14 +63,12 @@
                 required
                 minlength="6"
               />
-              <i
-                class="ph ph-eye absolute right-3 top-1/3 -translate-y-1/2 text-base-content/70 cursor-pointer transition-transform duration-200 hover:text-primary"
-              ></i>
+              <i class="password-toggle ph ph-eye"></i>
             </div>
             <label class="label">
-              <span class="label-text-alt text-error hidden peer-invalid:block"
-                >A senha deve ter pelo menos 6 caracteres</span
-              >
+              <span class="label-text-alt text-error hidden peer-invalid:block">
+                A senha deve ter pelo menos 6 caracteres
+              </span>
             </label>
           </div>
 
@@ -79,9 +77,9 @@
               <input type="checkbox" class="checkbox checkbox-sm" />
               <span class="label-text">Manter-se conectado</span>
             </label>
-            <a href="#" class="text-sm text-primary hover:underline"
-              >Esqueceu a senha?</a
-            >
+            <a href="#" class="text-sm text-primary hover:underline">
+              Esqueceu a senha?
+            </a>
           </div>
 
           <button type="submit" class="btn btn-primary w-full mb-4">
@@ -90,14 +88,14 @@
 
           <div class="divider my-6">ou</div>
 
-          <div class="grid grid-cols-3 gap-3 mb-6">
-            <button type="button" class="btn btn-outline">
+          <div class="social-login">
+            <button type="button" class="social-btn">
               <i class="ph ph-google-logo text-xl"></i>
             </button>
-            <button type="button" class="btn btn-outline">
+            <button type="button" class="social-btn">
               <i class="ph ph-instagram-logo text-xl"></i>
             </button>
-            <button type="button" class="btn btn-outline">
+            <button type="button" class="social-btn">
               <i class="ph ph-github-logo text-xl"></i>
             </button>
           </div>
@@ -111,5 +109,8 @@
         </form>
       </div>
     </div>
+
+    <!-- JavaScript opcional -->
+    <script src="js/main.js"></script>
   </body>
 </html>

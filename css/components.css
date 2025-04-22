@@ -1,0 +1,42 @@
+.password-field {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  
+  .password-toggle {
+    position: absolute;
+    right: 0.75rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--tw-text-opacity, 1);
+    opacity: 0.7;
+    cursor: pointer;
+    transition: transform 0.2s, color 0.2s;
+  }
+  
+  .password-toggle:hover {
+    color: hsl(var(--primary-focus));
+  }
+  
+  .social-login {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .social-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    border: 1px solid hsl(var(--b3, var(--b2)) / var(--tw-border-opacity));
+    background-color: transparent;
+    transition: background-color 0.2s, border-color 0.2s;
+  }
+  
+  .social-btn:hover {
+    background-color: hsl(var(--b3, var(--b2)) / 0.2);
+  }
